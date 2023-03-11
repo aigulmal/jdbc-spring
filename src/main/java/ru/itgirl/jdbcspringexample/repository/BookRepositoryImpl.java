@@ -14,6 +14,9 @@ import java.util.List;
 public abstract class BookRepositoryImpl implements BookRepository {
     @Autowired
     private DataSource dataSource;
+    public BookRepositoryImpl(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
     @Override
     public List<Book> findAllBooks() {
