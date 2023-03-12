@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 public class BookController {
+    @Autowired
     private static BookRepository bookRepository;
     public BookController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
